@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<head>
+
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  
+    
+  <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+  <style id="INLINE_PEN_STYLESHEET_ID">a:hover {
+    text-decoration: none;
+  }
+  
+  .gallery-top-text li a {
+    border: 1px solid #797979;
+    padding: 8px 15px;
+    border-radius: 50px;
+    color: #797979;
+    display: inline-block;
+    margin: 3px 0;
+  }
+  .filter-button.active {
+    background: #797979;
+    color: #fff;
+  }
+  .filter {
+    border: 1px solid #fff;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%;
+    width: 100%;
+    opacity: 0;
+    transition: 1s ease;
+    background-color: #008cba;
+  }
+  .filter:hover .overlay {
+    opacity: 0.8;
+  }
+  .text {
+    color: white;
+    font-size: 2vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .filter * {
+    width: 100%;
+  }
+  </style></head>
+
+    
+
+    <body>
+        <div class="container">
+        <div class="row mt-4">
+          <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center">
+            <h1 class="gallery-title">Galeria de Imagens</h1>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-sm-12">
+            <div class="gallery_filter_tab">
+              <ul class="list-inline gallery-top-text">
+                <li class="list-inline-item ">
+                  <a href="javascript:void(0);" class="filter-button active" data-filter="all">Todos</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="javascript:void(0);" class="filter-button" data-filter="Times">Times</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="javascript:void(0);" class="filter-button" data-filter="Carros">Carros</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="javascript:void(0);" class="filter-button" data-filter="Paisagem">Paisagem</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="javascript:void(0);" class="filter-button" data-filter="Atores">Atores</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="javascript:void(0);" class="filter-button" data-filter="Jogos">Jogos</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutters">
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Times">
+          <img src="https://goodlogo.com/images/logos/small/chelsea_logo_3970.png" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Chelsea</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Carros">
+          <img src="https://www.usatoday.com/gcdn/-mm-/42af8a4fb7cc6a374ba8f80c534678dba314585d/c=500-0-2501-2001/local/-/media/2017/04/12/USATODAY/USATODAY/636276324581762899-DG018-037CLkr40bq86s926ukok312qhga30s.jpg" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Dodge Demon</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Paisagem">
+          <img src="https://hips.hearstapps.com/hmg-prod/images/reykjavik-cityscape-in-iceland-royalty-free-image-1634670262.jpg?crop=0.7228xw:1xh;center,top&amp;resize=640:*" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Reykjavik</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Carros">
+          <img src="https://helios-i.mashable.com/imagery/articles/00q8NyVh5XY8SaFasAzne8F/hero-image.fill.size_1200x1200.v1718972492.png" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Tourbillon</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Carros">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRC-e5MLHs-rhYzp5_a-6PnUEcOrbPm5k2jQ&amp;s" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Gol</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Times">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj6Uc1v4gSyUmuxjBufoXQ3WpfUG3FWgMtqw&amp;s" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Corinthians</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Times">
+          <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/12009.png" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Guangzhou FC</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Atores">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5saUDY93QWSUdHOsnb3YUEDeHwKG9DUrVYA&amp;s" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Peter D.</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Jogos">
+          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/phvVT0qZfcRms5qDAk0SI3CM.png" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Elden Ring</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Jogos">
+          <img src="https://assets-prd.ignimgs.com/2022/01/21/need-for-speed-underground-2-button-crop-1642797115202.jpg" class="img-fluid">
+          <div class="overlay">
+            <div class="text">NFS U2</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Paisagem">
+          <img src="https://catracalivre.com.br/wp-content/uploads/2020/02/bonito4.jpg" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Rio Sucuri - MS</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Atores">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWTA6sTK_k4Q3nc_FitV13o4jgGNPIwO0zNQ&amp;s" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Keanu Reeves</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Paisagem">
+          <img src="https://skyhookcontentful.imgix.net/7DhmphXZS1NMxKDUWQktnA/84b2f0629aafdfaf4206a5bfafbd888b/1__7_.jpg?auto=compress%2Cformat%2Cenhance%2Credeye&amp;crop=faces%2Ccenter&amp;fit=crop&amp;ar=1%3A1&amp;w=576px&amp;ixlib=react-9.7.0" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Aconcagua</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Atores">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Neil_Armstrong_pose_%28cropped%29.jpg" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Neil Armstrong</div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Paisagem">
+          <img src="https://cdn.dooca.store/3074/products/cristo-redentor-2_640x640+fill_ffffff.png?v=1625062769&amp;webp=0" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Cristo Redentor</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Atores">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnRRsFrL8LJYNZ5ZDS4oTNqZDKY05G-jJlLA&amp;s" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Jamie Foxx</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Atores">
+          <img src="https://midias.correiobraziliense.com.br/_midias/png/2024/06/07/1000x1000/1_sosias_baianos-37798977.png?20240607110439?20240607110439" class="img-fluid">
+          <div class="overlay">
+            <div class="text">Bad Boys 2</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Atores">
+          <img src="https://www.estrelando.com.br/uploads/2023/07/05/jackie-chan-1688566183.300x300.jpg">
+          <div class="overlay">
+            <div class="text">Jackie Chan</div>
+          </div>
+        </div>
+      
+      </div>
+        
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <script language="JavaScript" type="text/javascript">
+        $(document).ready(function(){
+        $(".filter-button").click(function(){
+            var value = $(this).attr('data-filter');
+            if(value == "all")
+            { 
+                $('.filter').show();
+            }
+            else
+            { 
+                $(".filter").not('.'+value).hide();
+                $('.filter').filter('.'+value).show();
+            }
+            if ($(".filter-button").removeClass("active")) {
+                $(this).addClass("active");
+            }
+        });
+        $(this).addClass("active");
+    });</script>
+
+      
+      </body>
+
+
+
+</html>
+
+
